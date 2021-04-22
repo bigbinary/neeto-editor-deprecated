@@ -1,7 +1,7 @@
-const PeerDepsExternalsPlugin = require("peer-deps-externals-webpack-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./lib/index.js",
+  entry: "./src/index.js",
   module: {
     rules: [
       {
@@ -28,7 +28,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(sass|css|scss)$/,
+        test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
           "style-loader",
@@ -42,10 +42,16 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname,
-    filename: "editor.js",
-    library: "neetoui-editor",
-    libraryTarget: "umd"
+    path: __dirname + "/build",
+    publicPath: "/"
   },
-  plugins: [new PeerDepsExternalsPlugin()]
+  devServer: {
+    historyApiFallback: true
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html"
+    })
+  ]
 };
