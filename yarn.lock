@@ -882,10 +882,10 @@
     "@babel/helper-validator-identifier" "^7.12.11"
     to-fast-properties "^2.0.0"
 
-"@bigbinary/neetoui@^1.0.17":
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/@bigbinary/neetoui/-/neetoui-1.0.17.tgz#180b187402756e978edfe0a71b4598f506280e5f"
-  integrity sha512-Ge58m3WyorIC0o+ALK3OrMKOOa1wxfvmI8MvxAJHfosB2C6/JPSGxiTw9FYxmXcAbMPfLWVkcgbw1q4iMaDeug==
+"@bigbinary/neetoui@^1.0.20":
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/@bigbinary/neetoui/-/neetoui-1.0.20.tgz#71dfb54c90dd164a32e001bcfc0eac77f3235de2"
+  integrity sha512-rU25/1GUx03vcNNApG1zYC2VEfX3KG+AIQkIOWWEW2M1Qzbui0hayW32TUuCqIZtEzYgMzh+2NcGwnhxqNswpQ==
   dependencies:
     "@tailwindcss/forms" "^0.3.2"
     "@tailwindcss/typography" "^0.4.0"
