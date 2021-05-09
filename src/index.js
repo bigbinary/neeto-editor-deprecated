@@ -17,12 +17,9 @@ const App = () => {
           <Editor
             name="editor"
             label="Rich Text Editor"
-            error={false}
             handleChange={(e) => setContent(e.target.value)}
             value={content}
-            autoResize={true}
             editorHeight={200}
-            className="mb-6"
           />
           <div className="mt-6">
             <h1 className="mb-2 text-base font-medium text-gray-800">Preview</h1>
