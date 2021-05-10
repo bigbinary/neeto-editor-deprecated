@@ -23,7 +23,10 @@ const App = () => {
           />
           <div className="mt-6">
             <h1 className="mb-2 text-base font-medium text-gray-800">Preview</h1>
-            <div className="p-4 bg-white rounded shadow trix-content" style={{ minHeight: 240 }}>
+            <div
+              className="p-4 break-words bg-white rounded shadow trix-content"
+              style={{ minHeight: 240 }}
+            >
               <div
                 dangerouslySetInnerHTML={previewContent()}
                 className="text-base font-normal text-gray-700"
