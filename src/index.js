@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./Header";
 import Editor from "../lib";
-import Sidebar from "./Sidebar";
 import DOMPurify from "dompurify";
 
 const App = () => {
@@ -11,33 +10,32 @@ const App = () => {
     return { __html: DOMPurify.sanitize(content) };
   };
   return (
-    <Router>
-      <div className="flex flex-row items-start justify-start">
-        <Sidebar />
-        <div className="relative flex flex-col flex-grow h-screen p-4 overflow-auto">
+    <div className="w-screen h-screen overflow-y-auto bg-gray-50">
+      <Header />
+      <div className="p-8">
+        <div className="mx-auto max-w-7xl">
           <Editor
             name="editor"
             label="Rich Text Editor"
-            labelProps={{
-              className: "font-normal mb-2",
-            }}
-            error={false}
             handleChange={(e) => setContent(e.target.value)}
             value={content}
-            autoResize={true}
             editorHeight={200}
-            backgroundColor="bg-white"
           />
           <div className="mt-6">
-            <h2 className="mb-2 text-sm font-medium">Preview</h2>
+            <h1 className="mb-2 text-base font-medium text-gray-800">Preview</h1>
             <div
-              dangerouslySetInnerHTML={previewContent()}
-              className="border border-gray-200 rounded-md p-3 min-h-200 text-base"
-            ></div>
+              className="p-4 break-words bg-white rounded shadow trix-content"
+              style={{ minHeight: 240 }}
+            >
+              <div
+                dangerouslySetInnerHTML={previewContent()}
+                className="text-base font-normal text-gray-700"
+              ></div>
+            </div>
           </div>
         </div>
       </div>
-    </Router>
+    </div>
   );
 };
 

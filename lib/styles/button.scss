@@ -1,0 +1,58 @@
+.nui-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: theme("borderRadius.DEFAULT");
+  font-size: theme("fontSize.sm");
+  font-weight: theme("fontWeight.medium");
+  line-height: 1;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.nui-btn--primary {
+    padding: 8px 12px;
+    color: theme("colors.white");
+    background: theme("colors.indigo.500");
+    border: thin solid transparent;
+    box-shadow: theme("boxShadow.md");
+
+    &:hover:not(:disabled),
+    &:active,
+    &:focus {
+      box-shadow: theme("boxShadow.sm");
+      background-color: theme("colors.indigo.600");
+    }
+
+    &:active,
+    &:focus {
+      border: thin solid theme("colors.indigo.600");
+    }
+  }
+
+  &.nui-btn--secondary {
+    padding: 8px 12px;
+    color: theme("colors.gray.600");
+    background-color: theme("colors.white");
+    border: thin solid theme("colors.gray.300");
+    box-shadow: theme("boxShadow.sm");
+
+    &:hover:not(:disabled),
+    &:active,
+    &:focus {
+      color: theme("colors.gray.800");
+      background-color: theme("colors.gray.50");
+    }
+  }
+}
