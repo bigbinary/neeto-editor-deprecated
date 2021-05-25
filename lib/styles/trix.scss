@@ -1,4 +1,4 @@
-.nui-trix__wrapper {
+.ne-trix__wrapper {
   width: 100%;
   position: relative;
 
@@ -14,7 +14,7 @@
     border-radius: 6px 6px 0 0;
     line-height: 1;
 
-    .nui-trix-button-row {
+    .ne-trix-button-row {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -90,7 +90,7 @@
         &.trix-dialog--color {
           width: max-content;
 
-          .nui-trix-button-group {
+          .ne-trix-button-group {
             border: none;
 
             .trix-button {
@@ -348,7 +348,7 @@ trix-editor,
   }
 }
 
-.nui-label {
+.ne-label {
   @apply text-sm;
   @apply text-gray-700;
   @apply font-medium;
@@ -359,14 +359,14 @@ trix-editor,
   align-items: center;
 }
 
-.nui-input__help-text {
+.ne-input__help-text {
   margin-top: 8px;
   font-size: 12px;
   line-height: 1.618;
   color: theme("colors.gray.600");
 }
 
-.nui-input__error {
+.ne-input__error {
   margin-top: 4px;
   font-size: 12px;
   color: theme("colors.red.600");
