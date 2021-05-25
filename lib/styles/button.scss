@@ -1,4 +1,4 @@
-.nui-btn {
+.ne-btn {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -21,7 +21,7 @@
     text-decoration: none;
   }
 
-  &.nui-btn--primary {
+  &.ne-btn--primary {
     padding: 8px 12px;
     color: theme("colors.white");
     background: theme("colors.indigo.500");
@@ -41,7 +41,7 @@
     }
   }
 
-  &.nui-btn--secondary {
+  &.ne-btn--secondary {
     padding: 8px 12px;
     color: theme("colors.gray.600");
     background-color: theme("colors.white");
