@@ -4,6 +4,25 @@ import Header from "./Header";
 import Editor from "../lib";
 import DOMPurify from "dompurify";
 
+export const VARIABLES = [
+  {
+    category: "Ticket",
+    fields: [
+      { key: "ticket.id", value: "ID" },
+      { key: "ticket.number", value: "Number" }
+    ]
+  },
+  {
+    category: "Organization",
+    fields: [
+      { key: "organization.id", value: "ID" },
+      { key: "organization.name", value: "Name" },
+      { key: "organization.slug", value: "Slug" },
+      { key: "organization.subdomain", value: "Subdomain" }
+    ]
+  }
+];
+
 const App = () => {
   const [content, setContent] = useState("Welcome to neetoEditor");
   const previewContent = () => {
@@ -17,12 +36,16 @@ const App = () => {
           <Editor
             name="editor"
             label="Rich Text Editor"
-            handleChange={(e) => setContent(e.target.value)}
+            handleChange={e => setContent(e.target.value)}
             value={content}
             editorHeight={200}
+            name={"test"}
+            placeholderVariables={VARIABLES}
           />
           <div className="mt-6">
-            <h1 className="mb-2 text-base font-medium text-gray-800">Preview</h1>
+            <h1 className="mb-2 text-base font-medium text-gray-800">
+              Preview
+            </h1>
             <div
               className="p-4 break-words bg-white rounded shadow trix-content"
               style={{ minHeight: 240 }}

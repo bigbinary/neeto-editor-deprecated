@@ -371,3 +371,7 @@ trix-editor,
   font-size: 12px;
   color: theme("colors.red.600");
 }
+
+.trix-button-group-spacer {
+  flex-grow: 1;
+}
