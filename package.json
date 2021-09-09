@@ -51,6 +51,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "peerDependencies": {
+    "@bigbinary/neetoui": "^2.0.42",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
