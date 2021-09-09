@@ -12,8 +12,6 @@ module.exports = {
   theme: {
     extend: {}
   },
-  variants: {
-    flexDirection: ["hover", "focus"]
-  },
+  variants: {},
   plugins: []
 };

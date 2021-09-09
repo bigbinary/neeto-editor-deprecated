@@ -40,7 +40,6 @@ const App = () => {
             value={content}
             editorHeight={200}
             name={"test"}
-            placeholderFor={"add"}
             placeholderVariables={VARIABLES}
           />
           <div className="mt-6">
